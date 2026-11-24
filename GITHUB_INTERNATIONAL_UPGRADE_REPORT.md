@@ -41,10 +41,9 @@ GitHub-only professional/profile upgrade for `maaz-shahid-dev` and `maaz-shahid-
 | Repository | Branch | Commit | Message |
 |---|---|---|---|
 | `maaz-shahid-dev/Maaz-Shahid-Dev` (profile README) | `main` | `7b2c91451f3ba0633530b116e09f313dca4ba4a5` | `docs: update international professional profile README` |
-| `maaz-shahid-dev/portfolio-v2` | `main` | `1fa3d06` *(see git log at push time; recorded in this report commit context below)* | `docs: upgrade repository README for international profile` *(intended/pushed with report update — confirm final hash in repo history if amended)* |
-| `maaz-shahid-dev/portfolio-v2` | `main` | *this report commit (pushed)* | `docs: add GitHub international upgrade report` |
+| `maaz-shahid-dev/portfolio-v2` | `main` | `7751aafe8c26d505e19cbd90f6a32d4bb7476272` (`7751aaf`) | `docs: upgrade repository README and add GitHub profile upgrade report` |
 
-> Note: exact final `portfolio-v2` documentation commit hashes for this upgrade pass are the commits pushed to `origin/main` in this session (README upgrade commit followed by this report commit). Verify with `git log --oneline -n 5` on `main`.
+> This `portfolio-v2` documentation commit includes both the upgraded repository `README.md` and this report. Previous related docs commit on `main`: `c6d7c9060dd3b295425d2fe80eda2c8304f8270c` (`docs: add production launch report`). Verify with `git log --oneline -n 5` on `main` if needed.
 
 ## Repository/profile metadata observed (verified reads)
 
