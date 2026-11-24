@@ -2,15 +2,16 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { profile } from "../../data/profile";
 import { useActiveSection } from "../../hooks/useActiveSection";
+import { requestContactIntent } from "../../data/contact";
 
 const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "seo-growth", label: "SEO & Growth" },
-  { id: "experience", label: "Experience" },
+  { id: "expertise", label: "Expertise" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "services", label: "Services" },
+  { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -59,7 +60,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#070b17]/55 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#05070f]/65 backdrop-blur-xl">
       <nav className="section-shell flex h-16 items-center justify-between gap-3" aria-label="Primary">
         <a
           href="#home"
@@ -69,7 +70,7 @@ export function Navbar() {
           }}
           className="min-w-0 truncate font-heading text-sm font-bold tracking-wide text-white sm:text-base"
         >
-          Muhammad Maaz Shahid
+          {profile.name}
         </a>
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
@@ -83,22 +84,19 @@ export function Navbar() {
                 aria-current={isActive ? "location" : undefined}
               >
                 {item.label}
-                {isActive ? <span className="absolute inset-x-3 -bottom-[1px] h-0.5 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500" /> : null}
+                {isActive ? <span className="absolute inset-x-3 -bottom-[1px] h-0.5 rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-300" /> : null}
               </button>
             );
           })}
         </div>
         <div className="hidden lg:block">
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              go("contact");
-            }}
-            className="inline-flex rounded-full bg-gradient-to-r from-violet-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110"
+          <button
+            type="button"
+            onClick={() => requestContactIntent("remote-employment")}
+            className="inline-flex rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110"
           >
-            Contact
-          </a>
+            Hire Me
+          </button>
         </div>
         <button
           ref={toggleRef}
@@ -114,7 +112,7 @@ export function Navbar() {
       </nav>
       <div
         id="mobile-nav"
-        className={`grid overflow-hidden border-t border-white/10 bg-[#070b17]/95 transition-[grid-template-rows,opacity] duration-300 ease-out lg:hidden ${
+        className={`grid overflow-hidden border-t border-white/10 bg-[#05070f]/97 transition-[grid-template-rows,opacity] duration-300 ease-out lg:hidden ${
           open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] border-t-transparent opacity-0"
         }`}
         aria-hidden={!open}
@@ -135,16 +133,21 @@ export function Navbar() {
                 {item.label}
               </button>
             ))}
-            <a
-              href={`mailto:${profile.email}`}
+            <button
+              type="button"
               tabIndex={open ? 0 : -1}
-              className="mt-2 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-400 px-4 py-3 text-center text-sm font-semibold text-slate-950"
+              onClick={() => {
+                setOpen(false);
+                requestContactIntent("remote-employment");
+              }}
+              className="mt-2 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-400 px-4 py-3 text-center text-sm font-semibold text-slate-950"
             >
-              Email Me
-            </a>
+              Hire Me
+            </button>
           </div>
         </div>
       </div>
     </header>
   );
 }
+

@@ -20,49 +20,50 @@ export const services: Service[] = [
   {
     title: "Flutter Mobile App Development",
     description:
-      "Design and build cross-platform mobile applications with a focus on maintainable architecture and practical product delivery.",
+      "Cross-platform mobile application development for Android and iOS with practical architecture, integrations, and product-focused delivery.",
     icon: Smartphone,
   },
   {
-    title: "Web Application Development",
+    title: "Web & SaaS Development",
     description:
-      "Create responsive, modern web interfaces and application experiences using current frontend technologies.",
+      "Responsive web applications and SaaS product interfaces built with modern frontend technologies and maintainable implementation patterns.",
     icon: PanelsTopLeft,
   },
   {
-    title: "Firebase Integration",
+    title: "Backend & API Integration",
     description:
-      "Implement Firebase-backed features such as authentication, data storage, and cloud-connected application workflows.",
-    icon: Cloud,
+      "Integration of REST APIs, Firebase services, and backend-connected workflows to enable reliable application functionality.",
+    icon: Plug,
   },
   {
-    title: "SaaS Development",
+    title: "Cloud, Deployment & Operations",
     description:
-      "Develop software-as-a-service product foundations with attention to workflows, usability, and scalable cloud infrastructure.",
-    icon: Code2,
+      "Practical support for cloud-connected delivery, deployment workflows, environment setup, and operational troubleshooting.",
+    icon: Cloud,
   },
   {
     title: "AI Workflow Automation",
     description:
-      "Build automation workflows that connect tools, APIs, and AI-assisted processes to reduce repetitive operational work.",
+      "Automation solutions using n8n, webhooks, local LLM tooling, and structured workflows to reduce repetitive processes.",
     icon: Bot,
   },
   {
-    title: "Technical Consulting",
+    title: "SaaS & Product Engineering",
     description:
-      "Provide practical guidance on implementation approaches, tooling choices, and technical coordination for software projects.",
+      "Implementation support for SaaS features, role-aware workflows, and scalable product foundations aligned with real business needs.",
+    icon: Code2,
+  },
+  {
+    title: "Technical Consulting & Coordination",
+    description:
+      "Technical guidance, implementation planning, and coordination to help teams make clear, practical delivery decisions.",
     icon: Workflow,
   },
   {
-    title: "API Integration",
+    title: "Troubleshooting & Reliability Support",
     description:
-      "Connect applications with external services and APIs to enable reliable data exchange and feature integrations.",
-    icon: Plug,
-  },
-  {
-    title: "Application Troubleshooting",
-    description:
-      "Investigate issues across mobile, web, and cloud-connected systems to improve stability and deployment readiness.",
+      "Investigation and resolution support for issues across mobile, web, and cloud-integrated systems to improve stability.",
     icon: LifeBuoy,
   },
 ];
+
